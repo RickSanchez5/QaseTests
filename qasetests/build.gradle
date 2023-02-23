@@ -14,15 +14,19 @@ repositories {
 
 dependencies {
     // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
-    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.7.2'
-
-
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.0.0-alpha-5'
     // https://mvnrepository.com/artifact/org.testng/testng
     testImplementation group: 'org.testng', name: 'testng', version: '7.0.0'
+    // https://mvnrepository.com/artifact/com.codeborne/selenide
+    implementation group: 'com.codeborne', name: 'selenide', version: '6.11.1'
 }
 
 task testbase (type: Test){
     useTestNG{
-        suites "src/test/resources/tesng.xml"
+        suites "src/test/resources/testng.xml"
     }
+}
+
+testbase.doFirst {
+    jvmArgs '-Dwdm.chromeDriverVersion=110.0.5481.77'
 }
