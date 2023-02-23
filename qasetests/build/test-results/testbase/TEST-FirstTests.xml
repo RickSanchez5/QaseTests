@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="FirstTests" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-02-22T17:20:39" hostname="DESKTOP-S3KRE6E" time="19.395">
+<testsuite name="FirstTests" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-02-23T04:57:26" hostname="DESKTOP-S3KRE6E" time="21.869">
   <properties/>
-  <testcase name="createCard" classname="FirstTests" time="19.395">
-    <failure message="Invalid element state [By.xpath: //input[@id='actual_result']]: element click intercepted: Element &lt;input class=&quot;JSbv01&quot; type=&quot;text&quot; name=&quot;actual_result&quot; id=&quot;actual_result&quot; tabindex=&quot;-1&quot; autocomplete=&quot;off&quot; required=&quot;&quot; value=&quot;&quot;&gt; is not clickable at point (316, 248). Other element would receive the click: &lt;div class=&quot;M7GDGt uhazjp wysiwyg&quot;&gt;...&lt;/div&gt;&#13;&#10;Screenshot: file:/C:/dev_test/QaseTests/qasetests/build/reports/tests/1677086458565.0.png&#13;&#10;Page source: file:/C:/dev_test/QaseTests/qasetests/build/reports/tests/1677086458565.0.html&#13;&#10;Timeout: 4 s.&#13;&#10;Caused by: ElementClickInterceptedException: element click intercepted: Element &lt;input class=&quot;JSbv01&quot; type=&quot;text&quot; name=&quot;actual_result&quot; id=&quot;actual_result&quot; tabindex=&quot;-1&quot; autocomplete=&quot;off&quot; required=&quot;&quot; value=&quot;&quot;&gt; is not clickable at point (316, 248). Other element would receive the click: &lt;div class=&quot;M7GDGt uhazjp wysiwyg&quot;&gt;...&lt;/div&gt;" type="com.codeborne.selenide.ex.InvalidStateException">Invalid element state [By.xpath: //input[@id='actual_result']]: element click intercepted: Element &lt;input class=&quot;JSbv01&quot; type=&quot;text&quot; name=&quot;actual_result&quot; id=&quot;actual_result&quot; tabindex=&quot;-1&quot; autocomplete=&quot;off&quot; required=&quot;&quot; value=&quot;&quot;&gt; is not clickable at point (316, 248). Other element would receive the click: &lt;div class=&quot;M7GDGt uhazjp wysiwyg&quot;&gt;...&lt;/div&gt;
-Screenshot: file:/C:/dev_test/QaseTests/qasetests/build/reports/tests/1677086458565.0.png
-Page source: file:/C:/dev_test/QaseTests/qasetests/build/reports/tests/1677086458565.0.html
+  <testcase name="createCard" classname="FirstTests" time="21.869">
+    <failure message="Invalid element state [By.xpath: //input[@id='actual_result']]: element click intercepted: Element &lt;input class=&quot;JSbv01&quot; type=&quot;text&quot; name=&quot;actual_result&quot; id=&quot;actual_result&quot; tabindex=&quot;-1&quot; autocomplete=&quot;off&quot; required=&quot;&quot; value=&quot;&quot;&gt; is not clickable at point (316, 248). Other element would receive the click: &lt;div class=&quot;M7GDGt uhazjp wysiwyg&quot;&gt;...&lt;/div&gt;&#13;&#10;Screenshot: file:/C:/dev_test/QaseTests/qasetests/build/reports/tests/1677128268110.0.png&#13;&#10;Page source: file:/C:/dev_test/QaseTests/qasetests/build/reports/tests/1677128268110.0.html&#13;&#10;Timeout: 4 s.&#13;&#10;Caused by: ElementClickInterceptedException: element click intercepted: Element &lt;input class=&quot;JSbv01&quot; type=&quot;text&quot; name=&quot;actual_result&quot; id=&quot;actual_result&quot; tabindex=&quot;-1&quot; autocomplete=&quot;off&quot; required=&quot;&quot; value=&quot;&quot;&gt; is not clickable at point (316, 248). Other element would receive the click: &lt;div class=&quot;M7GDGt uhazjp wysiwyg&quot;&gt;...&lt;/div&gt;" type="com.codeborne.selenide.ex.InvalidStateException">Invalid element state [By.xpath: //input[@id='actual_result']]: element click intercepted: Element &lt;input class=&quot;JSbv01&quot; type=&quot;text&quot; name=&quot;actual_result&quot; id=&quot;actual_result&quot; tabindex=&quot;-1&quot; autocomplete=&quot;off&quot; required=&quot;&quot; value=&quot;&quot;&gt; is not clickable at point (316, 248). Other element would receive the click: &lt;div class=&quot;M7GDGt uhazjp wysiwyg&quot;&gt;...&lt;/div&gt;
+Screenshot: file:/C:/dev_test/QaseTests/qasetests/build/reports/tests/1677128268110.0.png
+Page source: file:/C:/dev_test/QaseTests/qasetests/build/reports/tests/1677128268110.0.html
 Timeout: 4 s.
 Caused by: ElementClickInterceptedException: element click intercepted: Element &lt;input class=&quot;JSbv01&quot; type=&quot;text&quot; name=&quot;actual_result&quot; id=&quot;actual_result&quot; tabindex=&quot;-1&quot; autocomplete=&quot;off&quot; required=&quot;&quot; value=&quot;&quot;&gt; is not clickable at point (316, 248). Other element would receive the click: &lt;div class=&quot;M7GDGt uhazjp wysiwyg&quot;&gt;...&lt;/div&gt;
 	at com.codeborne.selenide.impl.ExceptionWrapper.wrap(ExceptionWrapper.java:26)
@@ -64,10 +64,10 @@ Caused by: org.openqa.selenium.ElementClickInterceptedException: element click i
 Build info: version: '4.7.2', revision: '4d4020c3b7'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [28233c7c4d5dfba54306b8d30ca572c2, clickElement {id=eec911c1-5eda-4a6f-a595-dde09722847b}]
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 110.0.5481.104, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\User\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:59609}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59609/devtoo..., se:cdpVersion: 110.0.5481.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (28233c7c4d5dfba54306b8d30ca572c2)] -&gt; xpath: //input[@id='actual_result']]
-Session ID: 28233c7c4d5dfba54306b8d30ca572c2
+Command: [e30bb53d567a87896afc7e71a247b22e, clickElement {id=ed0fa385-acf6-4314-a8fe-8c947a33cb44}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 110.0.5481.104, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\User\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:50769}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50769/devtoo..., se:cdpVersion: 110.0.5481.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (e30bb53d567a87896afc7e71a247b22e)] -&gt; xpath: //input[@id='actual_result']]
+Session ID: e30bb53d567a87896afc7e71a247b22e
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -94,12 +94,13 @@ Session ID: 28233c7c4d5dfba54306b8d30ca572c2
   <system-err><![CDATA[SLF4J: No SLF4J providers were found.
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
-Starting ChromeDriver 110.0.5481.77 (65ed616c6e8ee3fe0ad64fe83796c020644d42af-refs/branch-heads/5481@{#839}) on port 34712
+Starting ChromeDriver 110.0.5481.77 (65ed616c6e8ee3fe0ad64fe83796c020644d42af-refs/branch-heads/5481@{#839}) on port 28784
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-[1677086441.941][WARNING]: virtual void DevToolsClientImpl::AddListener(DevToolsEventListener *) subscribing a listener to the already connected DevToolsClient. Connection notification will not arrive.
-фев 22, 2023 8:20:42 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+[1677128249.536][WARNING]: virtual void DevToolsClientImpl::AddListener(DevToolsEventListener *) subscribing a listener to the already connected DevToolsClient. Connection notification will not arrive.
+фев 23, 2023 7:57:30 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 110, so returning the closest version found: 108
+[1677128268.398][SEVERE]: Unable to receive message from renderer
 ]]></system-err>
 </testsuite>

@@ -3,6 +3,7 @@ import com.qase.io.pages.*;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import util.CardData;
 
 import java.util.concurrent.TimeUnit;
 
@@ -39,6 +40,7 @@ public class FirstTests {
 */
     @Test
     public void createCard(){
+        CardData defect = new CardData("title2","desc1");
         LoginPage loginPage = open("https://app.qase.io/login", LoginPage.class);
         loginPage.enterLogin("forEducationBelov@yandex.ru");
         loginPage.enterPassword("ViVaLaFreedom");
@@ -51,8 +53,8 @@ public class FirstTests {
         DefectsPage defectsPage = projectDashboardPage.openDefects();
         defectsPage.checkDefectsPage();
         defectsPage.clickCreateNewDefect();
-        defectsPage.addNewDefect("title1","desc1");
-        defectsPage.checkDefectAdded("title1");
+        defectsPage.addNewDefect(defect.getCardName(), defect.getCardDescription());
+        defectsPage.checkDefectAdded(defect.getCardName());
     }
 
     @AfterMethod
