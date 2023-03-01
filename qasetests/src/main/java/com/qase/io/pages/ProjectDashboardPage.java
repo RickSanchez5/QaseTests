@@ -21,5 +21,6 @@ public class ProjectDashboardPage {
         defectsLink.click();
         return Selenide.page(DefectsPage.class);
     }
-
 }
+
+

@@ -14,7 +14,7 @@ public class DefectsPage {
     @FindBy(id = "title")
     public SelenideElement defectTitle;
 
-    @FindBy(xpath = "//input[@id='actual_result']")
+    @FindBy(className = "ProseMirror")
     public SelenideElement defectResult;
 
     @FindBy(xpath = "//div[@id='severityGroup']/div/div/div")

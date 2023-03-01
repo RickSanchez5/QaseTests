@@ -5,8 +5,8 @@ import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.support.FindBy;
 
-
 public class DashboardPage {
+
     @FindBy(xpath = "//a[@href='/project/DEMO']")
     public SelenideElement projectLink;
 
@@ -22,3 +22,4 @@ public class DashboardPage {
         return Selenide.page(ProjectsPage.class);
     }
 }
+
