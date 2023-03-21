@@ -30,3 +30,4 @@ task testbase (type: Test){
 testbase.doFirst {
     jvmArgs '-Dwdm.chromeDriverVersion=110.0.5481.77'
 }
+

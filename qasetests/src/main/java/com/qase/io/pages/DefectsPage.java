@@ -14,47 +14,95 @@ public class DefectsPage {
     @FindBy(id = "title")
     public SelenideElement defectTitle;
 
-    @FindBy(className = "ProseMirror")
-    public SelenideElement defectResult;
+    @FindBy(xpath = "//div[@class='ProseMirror toastui-editor-contents']")
+    public SelenideElement defectResult_container;
+
+    @FindBy(xpath = "//div[@class='ProseMirror toastui-editor-contents ProseMirror-focused']")
+    public SelenideElement defectResult_field;
 
     @FindBy(xpath = "//div[@id='severityGroup']/div/div/div")
     public SelenideElement defectPrioritySelector;
 
+    @FindBy(xpath = "//div[.='Blocker']")
+    public SelenideElement defectPriorityBlocker;
+
+    @FindBy(xpath = "//div[.='Critical']")
+    public SelenideElement defectPriorityCritical;
+
+    @FindBy(xpath = "//div[.='Major']")
+    public SelenideElement defectPriorityMajor;
+
     @FindBy(xpath = "//div[.='Normal']")
     public SelenideElement defectPriorityNormal;
+
+    @FindBy(xpath = "//div[.='Minor']")
+    public SelenideElement defectPriorityMinor;
+
+    @FindBy(xpath = "//div[.='Trivial']")
+    public SelenideElement defectPriorityTrivial;
 
     @FindBy(xpath = "//button[.='Create defect']")
     public SelenideElement saveDefectBtn;
 
-    @FindBy(xpath = "//a[.='defect-2-title']")
+    @FindBy(xpath = "//a[.='title2']")
     public SelenideElement cardName;
+
+    @FindBy(xpath = "//div[@class='dropdown']")
+    public SelenideElement btnDropdown;
+
+    @FindBy(xpath = "//a[.='Delete']")
+    public SelenideElement deleteDefectBtn;
+
+    @FindBy(xpath = "//button[.='Delete']")
+    public SelenideElement confirmDeleteDefectBtn;
 
     public void checkDefectsPage(){
         defectsHeader.shouldBe(Condition.visible);
         createNewDefectBtn.shouldBe(Condition.visible);
     }
 
-    public void clickCreateNewDefect(){
-        createNewDefectBtn.click();
-    }
-
-    public void setDefectPriorityNormal(){
+    public void setDefectPriority(String priority){
         defectPrioritySelector.click();
-        defectPriorityNormal.click();
+        switch (priority) {
+            case "blocker":
+                defectPriorityBlocker.click();
+                break;
+            case "critical":
+                defectPriorityCritical.click();
+                break;
+            case "major":
+                defectPriorityMajor.click();
+                break;
+            case "normal":
+                defectPriorityNormal.click();
+                break;
+            case "minor":
+                defectPriorityMinor.click();
+                break;
+            case "trivial":
+                defectPriorityTrivial.click();
+                break;
+        }
     }
 
-    public void addNewDefect(String issueName, String issueDesc){
+    public void addNewDefect(String cardTitle,String cardResult) {
+        createNewDefectBtn.click();
         defectTitle.click();
-        defectTitle.sendKeys(issueName);
+        defectTitle.sendKeys(cardTitle);
 
-        defectResult.click();
-        defectResult.sendKeys(issueDesc);
-        setDefectPriorityNormal();
+        defectResult_container.click();
+        defectResult_field.sendKeys(cardResult);
+        setDefectPriority("trivial");
         saveDefectBtn.click();
     }
 
-    public void checkDefectAdded(String issueName){
-        cardName.shouldBe(Condition.text(issueName));
+    public void checkDefectAdded(String defectName){
+        cardName.shouldBe(Condition.text(defectName));
+    }
+
+    public void deleteDefect(){
+        deleteDefectBtn.click();
+        confirmDeleteDefectBtn.click();
     }
 }
 
