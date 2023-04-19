@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class DashboardPage {
 
-    @FindBy(xpath = "//a[@href='/project/DEMO']")
+    @FindBy(xpath = "//a[.='Demo Project']")
     public SelenideElement projectLink;
 
     @FindBy(xpath = "//a[.='Projects']")

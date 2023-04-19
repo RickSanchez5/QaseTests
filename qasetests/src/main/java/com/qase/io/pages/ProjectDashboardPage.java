@@ -8,13 +8,13 @@ import org.openqa.selenium.support.FindBy;
 public class ProjectDashboardPage {
 
     @FindBy(xpath = "//h1[.='DEMO repository']")
-    public SelenideElement projectOverwiew;
+    public SelenideElement projectOverview;
 
     @FindBy(xpath = "//span[.='Defects']")
     public SelenideElement defectsLink;
 
     public void checkProjectDashboardPage() {
-        projectOverwiew.shouldBe(Condition.visible);
+        projectOverview.shouldBe(Condition.visible);
     }
 
     public DefectsPage openDefects() {

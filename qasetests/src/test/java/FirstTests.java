@@ -16,7 +16,7 @@ public class FirstTests {
         Configuration.browser = "chrome";
         Configuration.browserSize = "1600x1000";
     }
-/*
+
     @Test
     public void loginAsRegisteredUser() throws Exception {
         UserData user = new UserData("forEducationBelov@yandex.ru", "ViVaLaFreedom");
@@ -42,7 +42,7 @@ public class FirstTests {
 
     @Test
     public void createCard() {
-        CardData defect = new CardData("title2", "desc1");
+        CardData defect = new CardData("title5", "desc1");
         UserData user = new UserData("forEducationBelov@yandex.ru", "ViVaLaFreedom");
         LoginPage loginPage = open("https://app.qase.io/login", LoginPage.class);
         loginPage.enterLogin(user.getUserLogin());
@@ -59,7 +59,6 @@ public class FirstTests {
         defectsPage.checkDefectAdded(defect.getCardName());
     }
 
-*/
     @Test
     public void deleteDefectCard() {
         UserData user = new UserData("forEducationBelov@yandex.ru", "ViVaLaFreedom");
@@ -74,7 +73,7 @@ public class FirstTests {
         projectDashboardPage.checkProjectDashboardPage();
         DefectsPage defectsPage = projectDashboardPage.openDefects();
         defectsPage.checkDefectsPage();
-        //defectsPage.deleteDefect();
+        defectsPage.deleteDefect("title5");
     }
 
     @AfterMethod

@@ -1,7 +1,9 @@
 package com.qase.io.pages;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.FindBy;
 
 public class DefectsPage {
@@ -44,11 +46,8 @@ public class DefectsPage {
     @FindBy(xpath = "//button[.='Create defect']")
     public SelenideElement saveDefectBtn;
 
-    @FindBy(xpath = "//a[.='title2']")
+    @FindBy(xpath = "//a[.='title5']")
     public SelenideElement cardName;
-
-    @FindBy(xpath = "//div[@class='dropdown']")
-    public SelenideElement btnDropdown;
 
     @FindBy(xpath = "//a[.='Delete']")
     public SelenideElement deleteDefectBtn;
@@ -92,7 +91,7 @@ public class DefectsPage {
 
         defectResult_container.click();
         defectResult_field.sendKeys(cardResult);
-        setDefectPriority("trivial");
+        setDefectPriority("critical");
         saveDefectBtn.click();
     }
 
@@ -100,7 +99,8 @@ public class DefectsPage {
         cardName.shouldBe(Condition.text(defectName));
     }
 
-    public void deleteDefect(){
+    public void deleteDefect(String name) {
+        Selenide.$(By.xpath("//td//div[.='"+name+"']/../following::td/following::td/following::td/following::td/following::td/following::td/div/a")).click();
         deleteDefectBtn.click();
         confirmDeleteDefectBtn.click();
     }
